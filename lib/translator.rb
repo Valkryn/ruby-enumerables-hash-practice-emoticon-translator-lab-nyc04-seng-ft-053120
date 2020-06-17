@@ -26,11 +26,11 @@ end
 def get_japanese_emoticon(yaml,emoticon)
   results = ""
   library = load_library(yaml)
-  library.each do | emo_meaning , languages | 
+  library.each do | emo_meaning , languages |
     if emoticon == languages[:english]
       return languages[:japanese]
     else
-      results = "Sorry, that emoticon was not found"
+      puts "Sorry, that emoticon was not found"
     end
   end
   results
